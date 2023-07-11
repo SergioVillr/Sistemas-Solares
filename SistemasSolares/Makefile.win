@@ -1,0 +1,46 @@
+# Project: Proyecto1_SVillanueva
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Cuerpos_Celestes.o Estrella.o main.o Planeta.o Sistema_Solar.o Cometa.o Satelite.o
+LINKOBJ  = Cuerpos_Celestes.o Estrella.o main.o Planeta.o Sistema_Solar.o Cometa.o Satelite.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -lbgi -lgdi32 -luser32 -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Proyecto1_SVillanueva.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Cuerpos_Celestes.o: Cuerpos_Celestes.cpp
+	$(CPP) -c Cuerpos_Celestes.cpp -o Cuerpos_Celestes.o $(CXXFLAGS)
+
+Estrella.o: Estrella.cpp
+	$(CPP) -c Estrella.cpp -o Estrella.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Planeta.o: Planeta.cpp
+	$(CPP) -c Planeta.cpp -o Planeta.o $(CXXFLAGS)
+
+Sistema_Solar.o: Sistema_Solar.cpp
+	$(CPP) -c Sistema_Solar.cpp -o Sistema_Solar.o $(CXXFLAGS)
+
+Cometa.o: Cometa.cpp
+	$(CPP) -c Cometa.cpp -o Cometa.o $(CXXFLAGS)
+
+Satelite.o: Satelite.cpp
+	$(CPP) -c Satelite.cpp -o Satelite.o $(CXXFLAGS)
