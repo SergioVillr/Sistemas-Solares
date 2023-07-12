@@ -5,6 +5,10 @@ Proyecto desarrollado utilizando el paradigma de orientación a objetos en el le
 Conceptos básicos de la POO: Clases, objeto, estado, entidad, atributos, métodos, visibilidad, vista, abstracción, encapsulación.
 Colecciones básicas: Arreglos de tipos básicos y de objetos (dinámicos y estáticos), administración de operaciones básicas.
 
+El ojetivo del proyecto es poder crear sistemas solares en los que se debe crear una estrella central con n cantidad de planetas y distintos tamaños
+Se pueden crear satelites naturales para los planetas
+Un cometa cada cieta cantidad de tiempo pasa por los sistemas creados
+
 MENU
 
 [![image.png](https://i.postimg.cc/9FtszHs3/image.png)](https://postimg.cc/Whz5fC2S)
